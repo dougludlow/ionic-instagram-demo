@@ -1,25 +1,40 @@
-Ionic App Base
+Ionic Instagram API Demo App
 =====================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+A simple project demoing the Ionic Framework. Uses Auth0 for login and pulls in the top 20 posts from Instagram.
 
-## Using this project
+## Running this project
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+If you haven't already, install Ionic, Cordova and Bower:
 
 ```bash
-$ npm install -g ionic
+$ npm install -g ionic cordova bower
 ```
 
-Then run:
+Install library dependencies:
 
 ```bash
-$ ionic start myProject tabs
+$ npm install
 ```
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+```bash
+$ bower install
+```
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+To launch the app in your browser:
+
+```bash
+$ ionic serve
+```
+
+To emulate the app on iOS:
+
+```bash
+$ ionic emulate ios
+```
+
+To emulate the app on Android:
+
+```bash
+$ ionic emulate android
+```
