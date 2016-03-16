@@ -1,7 +1,7 @@
 Ionic Instagram API Demo App
 =====================
 
-A simple project demoing the Ionic Framework. Uses Auth0 for login and pulls in the top 20 posts from Instagram.
+A simple project demoing the [Ionic Framework](http://ionicframework.com/docs/). Uses [Auth0](https://auth0.com/) for login and pulls in the top 20 posts from the [Instagram API](https://www.instagram.com/developer/).
 
 ## Running this project
 
