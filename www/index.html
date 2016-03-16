@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="lib/auth0.js/build/auth0.js"></script>
+    <script src="lib/auth0-lock/build/auth0-lock.js"></script>
+    <script src="lib/auth0-angular/build/auth0-angular.js"></script>
+    <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="lib/moment/min/moment.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/services/auth.service.js"></script>
+    <script src="app/services/instagram.service.js"></script>
+    <script src="app/filters/from-now.filter.js"></script>
+    <script src="app/home/home.js"></script>
+</head>
+<body ng-app="ionigram">
+    <ion-nav-bar>
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view></ion-nav-view>
+</body>
+</html>

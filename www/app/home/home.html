@@ -1,0 +1,43 @@
+<ion-view view-title="Ionigram">
+    
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon button-clear button-positive ion-gear-a" ng-click="vm.showMenu()" ng-if="vm.isLoggedIn()"></button>
+    </ion-nav-buttons>
+    
+    <ion-content ng-class="{ padding: !vm.isLoggedIn() }">
+        <p ng-if="!vm.isLoggedIn()">
+            <button class="button button-block button-positive" ng-click="vm.login()">
+                <i class="icon ion-social-instagram"></i> Login
+            </button>
+        </p>
+
+        <div ng-if="vm.isLoggedIn()">
+            <div class="card list" ng-repeat="post in vm.posts">
+                <div class="item item-avatar">
+                    <img ng-src="{{post.user.profile_picture}}" />
+                    <h2>{{post.user.full_name}}</h2>
+                    <p>{{post.created_time | date}}</p>
+                </div>
+
+                <div class="item item-image">
+                    <img ng-src="{{post.images.standard_resolution.url}}" />
+                </div>
+
+                <div class="item item-body">
+                    <p ng-if="post.caption.text">{{post.caption.text}}</p>
+                    <p>
+                        <span class="subdued pull-right">
+                            {{post.created_time | fromNow}}
+                        </span>
+                        <a href="" class="subdued ion-heart">
+                            {{post.likes.count}} Like{{post.likes.count === 1 ? '' : 's'}}
+                        </a>
+                        <a href="" class="subdued ion-ios-chatbubble">
+                            {{post.comments.count}} Comment{{post.comments.count === 1 ? '' : 's'}}
+                        </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    
+</ion-view>
